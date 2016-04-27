@@ -14,7 +14,8 @@ optdepends=(
     'pamac-aur: A Gtk3 frontend for libalpm'
 )
 backup=('etc/yaourt-gui.conf' 'usr/share/yaourt-gui/script/yglogo.sh')
-source=("$pkgname::git+https://github.com/alexiobash/$pkgname.git")
+#source=("$pkgname::git+https://github.com/alexiobash/$pkgname.git")
+source=("$pkgname::git+https://github.com/alexiobash/$pkgname-$pkgver.git")
 install="${pkgname}.install"
 md5sums=('SKIP')
 
