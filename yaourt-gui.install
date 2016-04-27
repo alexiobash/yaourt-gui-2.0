@@ -1,0 +1,27 @@
+pkgname="yaourt-gui"
+
+post_install() {
+	RED="\033[1;31m"
+	NC="\033[0m"
+	echo
+	echo "==> To modify Yaourt-Gui logo edit file: /usr/share/yaourt-gui/yglogo.sh"
+	echo "==> For Proxy settings add in your ~/.bashrc or /etc/bash.bashrc:"
+	echo "if [ -f /etc/profile.d/proxy.sh ]; then" 
+	echo "	source /etc/profile.d/proxy.sh" 
+	echo "else"
+	echo "	unset http_proxy"
+	echo "	unset https_proxy"
+	echo "	unset ftp_proxy"
+	echo "fi"
+	echo "==>"
+	echo "==> and add in /etc/sudoers:"
+	echo "==> Defaults env_keep = "http_proxy https_proxy ftp_proxy""
+	echo "==>"
+	echo "==> To modify Yaourt-Gui preference edit file: /etc/yaourt-gui.conf"
+	echo "==>"
+	echo "==> WARNING <=="
+	echo "==> Run this command (normal user) if you not have root provileges"
+	echo "==>"or not using sudo without password:"
+	echo "$ sed -e s/USER/$USER/g /usr/share/yaourt-gui/yaourt-gui.sudo | sudo tee /etc/sudoers.d/yaourt-gui"
+	echo "==>"
+}

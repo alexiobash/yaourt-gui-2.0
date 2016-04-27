@@ -1,0 +1,15 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Yaourt-Gui GTK
+GenericName=A GTK Gui for Yaourt-GUI
+Icon=yaourtgui
+Type=Application
+Categories=GTK;GNOME;System;
+MimeType=text/html
+Encoding=UTF-8
+Exec=yaourt-gui --gtk
+Terminal=false
+MultipleArgs=false
+StartupNotify=false
+X-KDE-SubstituteUID=false                                                                                 
+X-KDE-Username=        

@@ -1,0 +1,583 @@
+ yaourt-gui default.po file
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: yaourt-gui 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-06-25 18:54+0200\n"
+"PO-Revision-Date: 2015-08-21 12:00+0100\n"
+"Last-Translator: alexiobash < me@alexiobash.com >\n"
+"Language-Team: alexiobash.com \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Press ENTER to display the Menu"
+msgstr ""
+
+msgid "not found"
+msgstr ""
+
+msgid "[1] Sync DB		[9]  Search & Install	[17] Set Proxy"
+msgstr ""
+
+msgid "[2] Update System	[10] Belongs To Files	[18] Remove Proxy"
+msgstr ""
+
+msgid "[3] Update force mode	[11] Info Packages	[19] Edit pacman.conf"
+msgstr ""
+
+msgid "[4] Install Packages	[12] Clear Cache	[20] Edit yaourtrc"
+msgstr ""
+
+msgid "[5] Remove Packages	[13] PacDiffViewer      [L] Log Pacman"
+msgstr ""
+
+msgid "[6] Update Packages	[14] Pacman DB Upgrade	[B] Backup pkg list"
+msgstr ""
+
+msgid "[7] Remove Dependencies	[15] Pacman Optimize    [H] Help yaourt-gui"
+msgstr ""
+
+msgid "[8] Search Packages     [16] Yaourt Stats       [Q] Quit"
+msgstr ""
+
+msgid "Run a Command or Number"
+msgstr ""
+
+msgid "DB Synchronization in progress..."
+msgstr ""
+
+msgid "COMMAND"
+msgstr ""
+
+msgid "Update in progress.... !!!Please Wait!!!"
+msgstr ""
+
+msgid "Which packages do you want install?"
+msgstr ""
+
+msgid "Which Package do you want remove?"
+msgstr ""
+
+msgid "Which packages do you want upgrade?"
+msgstr ""
+
+msgid "Which packages do you want search?"
+msgstr ""
+
+msgid "Which packages do you want search and install?"
+msgstr ""
+
+msgid "Which file or commands do you want search?"
+msgstr ""
+
+msgid "Upgrade successfully"
+msgstr ""
+
+msgid "Is a Auth Proxy? y/n [default yes]"
+msgstr ""
+
+msgid "Write Username"
+msgstr ""
+
+msgid "Write Password"
+msgstr ""
+
+msgid "Write Ip or Hostname Proxy"
+msgstr ""
+
+msgid "Write port Proxy"
+msgstr ""
+
+msgid "Proxy set successfully"
+msgstr ""
+
+msgid "The proxy is not set"
+msgstr ""
+
+msgid "!!!WARNING!!! Unknown command!!"
+msgstr ""
+
+msgid "Do you really want remove proxy? y/n  [default yes]"
+msgstr ""
+
+msgid "Proxy Removed"
+msgstr ""
+
+msgid "Which programs do you want use?"
+msgstr ""
+
+msgid "Write"
+msgstr ""
+
+msgid "Backup list packages saved"
+msgstr ""
+
+msgid "GUIDE USE SCRIPT"
+msgstr ""
+
+msgid "To synchronize DB"
+msgstr ""
+
+msgid "To update the system"
+msgstr ""
+
+msgid "To update the system in force mode"
+msgstr ""
+
+msgid "To install a packages"
+msgstr ""
+
+msgid "To remove a packages"
+msgstr ""
+
+msgid "To update a packages"
+msgstr ""
+
+msgid "To remove unused dependencies"
+msgstr ""
+
+msgid "To search a packages"
+msgstr ""
+
+msgid "To search and install a packages"
+msgstr ""
+
+msgid "To view a file belonging"
+msgstr ""
+
+msgid "To query local database e info packages"
+msgstr ""
+
+msgid "To clean a cache"
+msgstr ""
+
+msgid "To Manage .pac* files"
+msgstr ""
+
+msgid "To run pacman-db-upgrade"
+msgstr ""
+
+msgid "To optimize pacman"
+msgstr ""
+
+msgid "To see the statistic of yaourt"
+msgstr ""
+
+msgid "To set a proxy"
+msgstr ""
+
+msgid "To remove a proxy"
+msgstr ""
+
+msgid "To modify"
+msgstr ""
+
+msgid "To view a log file"
+msgstr ""
+
+msgid "To backup list of installed packages"
+msgstr ""
+
+msgid "To see this menu"
+msgstr ""
+
+msgid "To exit the script"
+msgstr ""
+
+msgid "Edit"
+msgstr ""
+
+msgid "For more information about Pacman and Yaourt see Official Wiki"
+msgstr ""
+
+msgid "Command"
+msgstr ""
+
+msgid "Description"
+msgstr ""
+
+msgid "To remove a package, which is required by another package, without removing the dependent package"
+msgstr ""
+
+msgid "To remove packages whitout .pacsave creation"
+msgstr ""
+
+msgid "To see what packages belong to the group"
+msgstr ""
+
+msgid "To restore"
+msgstr ""
+
+msgid "Exit"
+msgstr ""
+
+msgid "Edit the Pacman Preference (/etc/pacman.conf)"
+msgstr ""
+
+msgid "Edit in Terminal"
+msgstr ""
+
+msgid "Use your graphic editor"
+msgstr ""
+
+msgid "Edit the Yaourt Preference (/etc/yaourtrc)"
+msgstr ""
+
+msgid "View pacman log: /var/log/pacman.log"
+msgstr ""
+
+msgid "View Log"
+msgstr ""
+
+msgid "or insert Keyword to find:"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Proxy Settings"
+msgstr ""
+
+msgid "Test Connettivity"
+msgstr ""
+
+msgid "Set Proxy"
+msgstr ""
+
+msgid "Remove Proxy"
+msgstr ""
+
+msgid "Options"
+msgstr ""
+
+msgid "Preference"
+msgstr ""
+
+msgid "Configure Proxy"
+msgstr ""
+
+msgid "Help"
+msgstr ""
+
+msgid "About Yaourt-Gui GTK"
+msgstr ""
+
+msgid "Command help"
+msgstr ""
+
+msgid "Initial Message"
+msgstr ""
+
+msgid "Advanzed"
+msgstr ""
+
+msgid "Sync DB"
+msgstr ""
+
+msgid "Update System"
+msgstr ""
+
+msgid "Update force mode"
+msgstr ""
+
+msgid "Packages"
+msgstr ""
+
+msgid "System"
+msgstr ""
+
+msgid "Install Packages"
+msgstr ""
+
+msgid "Search & Install"
+msgstr ""
+
+msgid "Update Packages"
+msgstr ""
+
+msgid "Remove"
+msgstr ""
+
+msgid "Remove Packages"
+msgstr ""
+
+msgid "Remove Dependencies"
+msgstr ""
+
+msgid "Clear Cache"
+msgstr ""
+
+msgid "Belongs To Files"
+msgstr ""
+
+msgid "Info Packages"
+msgstr ""
+
+msgid "Unlock Pacman DB"
+msgstr ""
+
+msgid "Edit pacman.conf"
+msgstr ""
+
+msgid "Edit yaourtrc"
+msgstr ""
+
+msgid "Yaourt Stats"
+msgstr ""
+
+msgid "Backup pkg list"
+msgstr ""
+
+msgid "Restore Pkg"
+msgstr ""
+
+msgid "Insert Root Password to be continue. Save your Password for this session."
+msgstr ""
+
+msgid "Pacman is currently in use."
+msgstr ""
+
+msgid "please wait or use the Unlock Function."
+msgstr ""
+
+msgid "Run in terminal"
+msgstr ""
+
+msgid "Do you want Sync DB?"
+msgstr ""
+
+msgid "Sync"
+msgstr ""
+
+msgid "Press Enter to close the window"
+msgstr ""
+
+msgid "Sync DB in progress..."
+msgstr ""
+
+msgid "No packages needs to be updated!!!"
+msgstr ""
+
+msgid "Available Updates:"
+msgstr ""
+
+msgid "Pick"
+msgstr ""
+
+msgid "Repo"
+msgstr ""
+
+msgid "Actual"
+msgstr ""
+
+msgid "Update"
+msgstr ""
+
+msgid "No package selected"
+msgstr ""
+
+msgid "Upgrade noconfirm"
+msgstr ""
+
+msgid "Abort"
+msgstr ""
+
+msgid "Upgrade"
+msgstr ""
+
+msgid "packages will be upgraded:"
+msgstr ""
+
+msgid "Current"
+msgstr ""
+
+msgid "Proxy allready configured"
+msgstr ""
+
+msgid "The Proxy is allready configured."
+msgstr ""
+
+msgid "Do you want override proxy settings?"
+msgstr ""
+
+msgid "Is a Auth Proxy?"
+msgstr ""
+
+msgid "IP or Hostname"
+msgstr ""
+
+msgid "Port"
+msgstr ""
+
+msgid "Username"
+msgstr ""
+
+msgid "Empty Value"
+msgstr ""
+
+msgid "Do you really want remove proxy?"
+msgstr ""
+
+msgid "Contact"
+msgstr ""
+
+msgid "Test Connectivity FAILED"
+msgstr ""
+
+msgid "Test Connectivity OK"
+msgstr ""
+
+msgid "Pacman Optimized"
+msgstr ""
+
+msgid "Pacman not Optimized"
+msgstr ""
+
+msgid "Pacman DB Upgraded"
+msgstr ""
+
+msgid "Pacman DB not Upgraded"
+msgstr ""
+
+msgid "No Dependencies to be removed"
+msgstr ""
+
+msgid "All Dependencies have been removed"
+msgstr ""
+
+msgid "Dependencies"
+msgstr ""
+
+msgid "Dependencies to be removed:"
+msgstr ""
+
+msgid "Select Packages"
+msgstr ""
+
+msgid "Available Packages"
+msgstr ""
+
+msgid "Good Notice! Pacman is not locked!"
+msgstr ""
+
+msgid "not exist"
+msgstr ""
+
+msgid "Delete /var/lib/pacman/db.lck and kill Pacman process is more Dangerous."
+msgstr ""
+
+msgid "Are you sure to be continued?"
+msgstr ""
+
+msgid "Pacman is now unlocked!"
+msgstr ""
+
+msgid "Insert package/s name to be removed:"
+msgstr ""
+
+msgid "Select Packages to be removed"
+msgstr ""
+
+msgid "==> Press CTRL + C to Exit"
+msgstr ""
+
+msgid "Restore Preference"
+msgstr ""
+
+msgid "Do you want restore /etc/yaourt-gui.conf?"
+msgstr ""
+
+msgid "Restore completed"
+msgstr ""
+
+msgid "Not Installed"
+msgstr ""
+
+msgid "Configure your preference"
+msgstr ""
+
+msgid "Editor"
+msgstr ""
+
+msgid "Shell Editor"
+msgstr ""
+
+msgid "GTK Editor"
+msgstr ""
+
+msgid "Check Connection"
+msgstr ""
+
+msgid "Installation Metod"
+msgstr ""
+
+msgid "Use Pamac"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Set Now"
+msgstr ""
+
+msgid "Error"
+msgstr ""
+
+msgid "No Graphic Editor set in /etc/yaourt-gui.conf"
+msgstr ""
+
+msgid "Select Folder"
+msgstr ""
+
+msgid "Backup Packages List completed"
+msgstr ""
+
+msgid "Backup Packages List not saved"
+msgstr ""
+
+msgid "Insert file name or command to be search:"
+msgstr ""
+
+msgid "Select"
+msgstr ""
+
+msgid "Select File"
+msgstr ""
+
+msgid "No package owns"
+msgstr ""
+
+msgid "Pamac not installed"
+msgstr ""
+
+msgid "Install Pamac"
+msgstr ""
+
+msgid "Install one or more packages"
+msgstr ""
+
+msgid "Package/s Name:"
+msgstr ""
+
+msgid "In case of multiple-choice enter a space between the one and the other package/s name."
+msgstr ""
+
+msgid "Install"
+msgstr ""
+
+msgid "Search and install one or more packages"
+msgstr ""
+
+msgid "Insert Keyword to find:"
+msgstr ""
+
+msgid "Example: firefox, tor-browser, XFCE, ecc"
+msgstr ""
+
+msgid "keyword"
+msgstr ""
+
+msgid "Search and Install"
+msgstr ""

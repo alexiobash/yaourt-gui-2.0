@@ -1,0 +1,30 @@
+# Yaourt-Gui is a bash and GTK gui for yaourt and Pacman
+#
+# Support: https://alexiobash.com
+# Mail: support@alexiobash.com
+#
+# Modify this file manually is dangerous, use the preference menu.
+
+# Set your prefered gtk editor (geany, gedit, ecc)
+GTKEDITOR=
+
+# Set your prefered terminal editor (vim,nano ecc)
+# if empty use nano.
+SEDITOR=
+
+# Set your terminal options
+XTERM='xterm -fn *-*-fixed-medium-r-normal--*-140-*-*-*-*-iso8859-7 -bg black -fg white -T Yaourt-Gui -e'
+
+# Url for testing connectivity
+URL=www.archlinux.org
+
+# 
+# Value: true|false|commented
+# commented=false
+USEPAMAC=false
+
+# I'm good for a laugh ;-)
+# Uncomment this line and restart yaourt-gui GTK.
+#EE=enable
+
+# End File

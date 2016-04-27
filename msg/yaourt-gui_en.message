@@ -1,0 +1,31 @@
+----------------------------------------------------------------------------------------------------------
+(EN) CONFIGURARE CORRETTAMENTE I PERMESSI PER YAOURT-GUI GTK
+----------------------------------------------------------------------------------------------------------
+
+Se utilizzi sudo con inserimento password, e vuoi che Yaourt-GUI GTK 
+funzioni correttamente dovresti creare il file /etc/sudoers.d/yaourt-gui e
+inserire le righe:
+
+MYUSER ALL = NOPASSWD: /usr/bin/yaourt
+MYUSER ALL = NOPASSWD: /usr/bin/pacman
+
+dove MYUSER è il tuon nome utente. 
+Puoi utilizzare questo comando per comodità:
+
+$ sed -e s/USER/$USER/g /usr/share/yaourt-gui/yaourt-gui.sudo | sudo tee /etc/sudoers.d/yaourt-gui
+
+----------------------------------------------------------------------------------------------------------
+(EN) CONFIGURARE LA PARTE PROXY IN MODO CORRETTO
+----------------------------------------------------------------------------------------------------------
+
+Per un corretto funzionamento del proxy aggiungi la riga seguente
+nei file ~/.bashrc e /etc/bash.bashrc:
+
+
+if [ -f /etc/profile.d/proxy.sh ]; then
+	source /etc/profile.d/proxy.sh
+else
+	unset http_proxy
+	unset https_proxy
+	unset ftp_proxy
+fi
