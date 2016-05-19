@@ -3,7 +3,7 @@
 #
 # Creation-Date: 2015-07-01
 #
-# Support: https://alexiobash.com
+# Support: http://alexiobash.com
 # Mail: support@alexiobash.com
 
 # Set environment
@@ -137,12 +137,14 @@ function setproxy () { # Set proxy
 	typeproxy=$(zenity --title="Proxy" --extra-button="$(gettext 'Abort')" --question --text="$(gettext 'Is a Auth Proxy?')")
 	case $? in
 		0) 
-			string_elab=$(zenity --forms --text="Set Proxy" --title "Proxy" --add-entry="$(gettext 'IP or Hostname'):" --add-entry="$(gettext 'Port'):" --add-entry="$(gettext 'Username'):" --add-password "Password:" --separator=" ")
+			#string_elab=$(zenity --forms --text="Set Proxy" --title "Proxy" --add-entry="$(gettext 'IP or Hostname'):" --add-entry="$(gettext 'Port'):" --add-entry="$(gettext 'Username'):" --add-password "Password:" --separator=" ")
+			string_elab=$(zenity --forms --text="Set Proxy" --title "Proxy" --add-entry="$(gettext 'IP or Hostname'):" --add-entry="$(gettext 'Port'):" --add-entry="$(gettext 'Username'):" --add-password "Password:" --add-entry="$(gettext 'Exclusion'):" --separator=" ")
 			if [[ $? != 0 ]]; then exit 1; fi
 			PROXY=$(echo $string_elab | awk '{print $1}')
 			PORT=$(echo $string_elab | awk '{print $2}')
 			USRNAME=$(echo $string_elab | awk '{print $3}')
 			PASSWPR=$(echo $string_elab | awk '{print $4}')
+			EXCLUDE=$(echo $string_elab | awk '{for (i=5; i<=NF; i++) print $i}')
 			if [[ ( -z $PROXY ) || ( -z $PORT ) || ( -z $USRNAME ) || ( -z $PASSWPR ) ]]; then zenity --error --text="$(gettext 'Empty Value')"; setproxy; fi
 			echo -e "#!/bin/bash" > /home/$USER/proxy.sh	
 			echo -e "PROXYHOST=$PROXY" >> /home/$USER/proxy.sh
@@ -150,6 +152,7 @@ function setproxy () { # Set proxy
 			echo "export http_proxy='http://$USRNAME:$PASSWPR@$PROXY:$PORT'" >> /home/$USER/proxy.sh
 			echo "export https_proxy='http://$USRNAME:$PASSWPR@$PROXY:$PORT'" >> /home/$USER/proxy.sh
 			echo "export ftp_proxy='http://$USRNAME:$PASSWPR@$PROXY:$PORT'" >> /home/$USER/proxy.sh
+			echo "export no_proxy='$EXCLUDE'" >> /home/$USER/proxy.sh
 			gksu -m "$msg" "mv /home/$USER/proxy.sh $PROFD"
 			if [[ -f $PROFD/proxy.sh ]]; then
 				gksu -m "$msg" "chmod +x $PROFD/proxy.sh"
@@ -165,10 +168,12 @@ function setproxy () { # Set proxy
 		;;
 		*)
 			if [[ ! -z $typeproxy ]]; then exit 1; fi
-			string_elab=$(zenity  --forms --text="Set Proxy" --title "Proxy" --add-entry="$(gettext 'IP or Hostname'):" --add-entry="$(gettext 'Port'):" --separator=" ")
+			#string_elab=$(zenity  --forms --text="Set Proxy" --title "Proxy" --add-entry="$(gettext 'IP or Hostname'):" --add-entry="$(gettext 'Port'):" --separator=" ")
+			string_elab=$(zenity  --forms --text="Set Proxy" --title "Proxy" --add-entry="$(gettext 'IP or Hostname'):" --add-entry="$(gettext 'Port'):" --add-entry="$(gettext 'Exclusion'):" --separator=" ")
 			if [[ $? != 0 ]]; then exit 1; fi
 			PROXY=$(echo $string_elab | awk '{print $1}')
 			PORT=$(echo $string_elab | awk '{print $2}')
+			EXCLUDE=$(echo $string_elab | awk '{for (i=3; i<=NF; i++) print $i}')
 			if [[ ( -z $PROXY ) || ( -z $PORT ) ]]; then zenity --error --text="$(gettext 'Empty Value')"; setproxy; fi
 			echo -e "#!/bin/bash" > /home/$USER/proxy.sh
 			echo -e "PROXYHOST=$PROXY" >> /home/$USER/proxy.sh
@@ -176,6 +181,7 @@ function setproxy () { # Set proxy
 			echo -e "export http_proxy='"http://$PROXY:$PORT"'" >> /home/$USER/proxy.sh
 			echo -e "export https_proxy='"http://$PROXY:$PORT"'" >> /home/$USER/proxy.sh
 			echo -e "export ftp_proxy='"http://$PROXY:$PORT"'" >> /home/$USER/proxy.sh
+			echo "export no_proxy='$EXCLUDE'" >> /home/$USER/proxy.sh
 			gksu -m "$msg" "mv /home/$USER/proxy.sh $PROFD"
 			if [[ -f $PROFD/proxy.sh ]]; then
 				gksu -m "$msg" "chmod +x $PROFD/proxy.sh"
