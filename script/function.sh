@@ -145,6 +145,7 @@ function setproxy () { # Set proxy
 			USRNAME=$(echo $string_elab | awk '{print $3}')
 			PASSWPR=$(echo $string_elab | awk '{print $4}')
 			EXCLUDE=$(echo $string_elab | awk '{for (i=5; i<=NF; i++) print $i}')
+			LISTEXCLUDE=$(echo $EXCLUDE)
 			if [[ ( -z $PROXY ) || ( -z $PORT ) || ( -z $USRNAME ) || ( -z $PASSWPR ) ]]; then zenity --error --text="$(gettext 'Empty Value')"; setproxy; fi
 			echo -e "#!/bin/bash" > /home/$USER/proxy.sh	
 			echo -e "PROXYHOST=$PROXY" >> /home/$USER/proxy.sh
@@ -152,7 +153,7 @@ function setproxy () { # Set proxy
 			echo "export http_proxy='http://$USRNAME:$PASSWPR@$PROXY:$PORT'" >> /home/$USER/proxy.sh
 			echo "export https_proxy='http://$USRNAME:$PASSWPR@$PROXY:$PORT'" >> /home/$USER/proxy.sh
 			echo "export ftp_proxy='http://$USRNAME:$PASSWPR@$PROXY:$PORT'" >> /home/$USER/proxy.sh
-			echo "export no_proxy='$EXCLUDE'" >> /home/$USER/proxy.sh
+			echo "export no_proxy='$LISTEXCLUDE'" >> /home/$USER/proxy.sh
 			gksu -m "$msg" "mv /home/$USER/proxy.sh $PROFD"
 			if [[ -f $PROFD/proxy.sh ]]; then
 				gksu -m "$msg" "chmod +x $PROFD/proxy.sh"
@@ -174,6 +175,7 @@ function setproxy () { # Set proxy
 			PROXY=$(echo $string_elab | awk '{print $1}')
 			PORT=$(echo $string_elab | awk '{print $2}')
 			EXCLUDE=$(echo $string_elab | awk '{for (i=3; i<=NF; i++) print $i}')
+			LISTEXCLUDE=$(echo $EXCLUDE)
 			if [[ ( -z $PROXY ) || ( -z $PORT ) ]]; then zenity --error --text="$(gettext 'Empty Value')"; setproxy; fi
 			echo -e "#!/bin/bash" > /home/$USER/proxy.sh
 			echo -e "PROXYHOST=$PROXY" >> /home/$USER/proxy.sh
@@ -181,7 +183,7 @@ function setproxy () { # Set proxy
 			echo -e "export http_proxy='"http://$PROXY:$PORT"'" >> /home/$USER/proxy.sh
 			echo -e "export https_proxy='"http://$PROXY:$PORT"'" >> /home/$USER/proxy.sh
 			echo -e "export ftp_proxy='"http://$PROXY:$PORT"'" >> /home/$USER/proxy.sh
-			echo "export no_proxy='$EXCLUDE'" >> /home/$USER/proxy.sh
+			echo "export no_proxy='$LISTEXCLUDE'" >> /home/$USER/proxy.sh
 			gksu -m "$msg" "mv /home/$USER/proxy.sh $PROFD"
 			if [[ -f $PROFD/proxy.sh ]]; then
 				gksu -m "$msg" "chmod +x $PROFD/proxy.sh"
