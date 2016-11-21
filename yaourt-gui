@@ -3,9 +3,6 @@
 #
 # Creation-Date: 2015-06-23
 #
-# Support: http://alexiobash.com
-# Mail: support@alexiobash.com
-#
 # Set environment
 TEXTDOMAINDIR=/usr/share/locale
 TEXTDOMAIN=yaourt-gui

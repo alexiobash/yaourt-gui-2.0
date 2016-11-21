@@ -1,12 +1,12 @@
-# alexiobash <me@alexiobash.com>
+# Alessio Di Paolosanti < a.dipaolosanti@2sni.com > 
 msgid ""
 msgstr ""
 "Project-Id-Version: yaourt-gui\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-08-25 10:44+0100\n"
 "PO-Revision-Date: 2015-08-25 10:44+0200\n"
-"Last-Translator: alexiobash <me@alexiobash.com>\n"
-"Language-Team: alexiobash.com <me@alexiobash.com>\n"
+"Last-Translator: Alessio Di Paolosanti <a.dipaolosanti@2sni.com>\n"
+"Language-Team: Alessio Di Paolosanti <a.dipaolosanti@2sni.com>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
