@@ -220,13 +220,9 @@ export INFOMAIN='
 			<text use-markup="true"><label>"Designed for new users who want to start using Arch Linux. Written in Bash, Zenity and GTKDialog, it offers a GUI to the common tasks of yaourt and pacman."</label></text>
 		</frame>
 		<frame Credits>
-			<text use-markup="true"><label>"<b>AlexioBash</b>"</label></text>
-			<text use-markup="true"><label>"www.alexiobash.com"</label></text>
-			<text use-markup="true"><label>"me@alexiobash.com"</label></text>
-		</frame>
-		<frame Special Thanks>
-			<text use-markup="true"><label>"<b>Tomberry</b> tomberro@gmail.com"</label> </text>
-			<text use-markup="true"><label>"<b>XFCE-ITALIA</b> Community www.xfce-italia.it"</label> </text>
+			<text use-markup="true"><label>"<b>Alessio Di Paolosanti</b>"</label></text>
+			<text use-markup="true"><label>"https://2sni.com"</label></text>
+			<text use-markup="true"><label>"a.dipaolosanti@2sni.com"</label></text>
 		</frame>
 		<hbox>
 			<button><label>'$(gettext 'Exit')'</label><input file icon="editdelete"></input><action type="exit">exit 0</action></button>
